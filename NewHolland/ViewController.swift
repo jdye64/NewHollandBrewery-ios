@@ -111,12 +111,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier) as UITableViewCell
-        
-        if cell: {
-            println("freshly here")
-        }
-        
+        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier) as UITableViewCell        
         var cellText: String = self.tableData[indexPath.row]["dba"] as String
         var cellAddress: String = self.tableData[indexPath.row]["address"] as String
         cellText += " - "
