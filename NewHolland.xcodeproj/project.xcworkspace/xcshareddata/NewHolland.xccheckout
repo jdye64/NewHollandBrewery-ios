@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FEF2B74A-10C5-4089-A475-F509BEFE86D1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NewHolland</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>446E0FA272658A476B808C812234C35CBB76C0CD</key>
+		<string>https://github.com/jdye64/NewHollandBrewery-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>NewHolland.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>446E0FA272658A476B808C812234C35CBB76C0CD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jdye64/NewHollandBrewery-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>446E0FA272658A476B808C812234C35CBB76C0CD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>446E0FA272658A476B808C812234C35CBB76C0CD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NewHolland</string>
+		</dict>
+	</array>
+</dict>
+</plist>
