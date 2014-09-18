@@ -12,6 +12,8 @@
 	<dict>
 		<key>446E0FA272658A476B808C812234C35CBB76C0CD</key>
 		<string>https://github.com/jdye64/NewHollandBrewery-ios.git</string>
+		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
+		<string>https://github.com/Alamofire/Alamofire.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>NewHolland.xcodeproj</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>446E0FA272658A476B808C812234C35CBB76C0CD</key>
 		<string>../..</string>
+		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
+		<string>../../../Alamofire</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/jdye64/NewHollandBrewery-ios.git</string>
@@ -28,6 +32,14 @@
 	<string>446E0FA272658A476B808C812234C35CBB76C0CD</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>67620B5EFA902936DF04070AF595B76AB0333747</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Alamofire</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

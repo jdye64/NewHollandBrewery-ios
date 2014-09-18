@@ -7,16 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1971A2D919CB237000E1395A /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971A2D819CB237000E1395A /* ResultCell.swift */; };
+		1971A2DE19CB388E00E1395A /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971A2DD19CB388E00E1395A /* SearchResult.swift */; };
+		1977A4F219CB4DE50010B019 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1977A4F119CB4DE50010B019 /* CoreLocation.framework */; };
+		1977A50919CB5F7E0010B019 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1977A50619CB5F6D0010B019 /* Alamofire.framework */; };
+		1977A50A19CB5F7E0010B019 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1977A50619CB5F6D0010B019 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		19FE0FDB19C8BD5B0043A920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE0FDA19C8BD5B0043A920 /* AppDelegate.swift */; };
 		19FE0FDD19C8BD5B0043A920 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE0FDC19C8BD5B0043A920 /* ViewController.swift */; };
 		19FE0FE019C8BD5B0043A920 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19FE0FDE19C8BD5B0043A920 /* Main.storyboard */; };
 		19FE0FE219C8BD5B0043A920 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19FE0FE119C8BD5B0043A920 /* Images.xcassets */; };
 		19FE0FE519C8BD5B0043A920 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19FE0FE319C8BD5B0043A920 /* LaunchScreen.xib */; };
 		19FE0FF119C8BD5B0043A920 /* NewHollandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE0FF019C8BD5B0043A920 /* NewHollandTests.swift */; };
-		19FE100219C8BDBE0043A920 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE0FFE19C8BDBE0043A920 /* ResultTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1977A50519CB5F6D0010B019 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1977A50019CB5F6D0010B019 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		1977A50719CB5F6D0010B019 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1977A50019CB5F6D0010B019 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		1977A50B19CB5F7E0010B019 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1977A50019CB5F6D0010B019 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
 		19FE0FEB19C8BD5B0043A920 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 19FE0FCD19C8BD5B0043A920 /* Project object */;
@@ -26,7 +51,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1977A50D19CB5F7E0010B019 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1977A50A19CB5F7E0010B019 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1971A2D819CB237000E1395A /* ResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
+		1971A2DD19CB388E00E1395A /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		1977A4F119CB4DE50010B019 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1977A50019CB5F6D0010B019 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		19FE0FD519C8BD5B0043A920 /* NewHolland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewHolland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19FE0FD919C8BD5B0043A920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19FE0FDA19C8BD5B0043A920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +80,6 @@
 		19FE0FEA19C8BD5B0043A920 /* NewHollandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewHollandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19FE0FEF19C8BD5B0043A920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19FE0FF019C8BD5B0043A920 /* NewHollandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHollandTests.swift; sourceTree = "<group>"; };
-		19FE0FFE19C8BDBE0043A920 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1977A4F219CB4DE50010B019 /* CoreLocation.framework in Frameworks */,
+				1977A50919CB5F7E0010B019 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,9 +102,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1971A2DA19CB385600E1395A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				1971A2DD19CB388E00E1395A /* SearchResult.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		1971A2DB19CB386000E1395A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				1971A2D819CB237000E1395A /* ResultCell.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		1971A2DC19CB386500E1395A /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				19FE0FDC19C8BD5B0043A920 /* ViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		1977A50119CB5F6D0010B019 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1977A50619CB5F6D0010B019 /* Alamofire.framework */,
+				1977A50819CB5F6D0010B019 /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		19FE0FCC19C8BD5B0043A920 = {
 			isa = PBXGroup;
 			children = (
+				1977A50019CB5F6D0010B019 /* Alamofire.xcodeproj */,
+				1977A4F119CB4DE50010B019 /* CoreLocation.framework */,
 				19FE0FD719C8BD5B0043A920 /* NewHolland */,
 				19FE0FED19C8BD5B0043A920 /* NewHollandTests */,
 				19FE0FD619C8BD5B0043A920 /* Products */,
@@ -79,9 +158,10 @@
 		19FE0FD719C8BD5B0043A920 /* NewHolland */ = {
 			isa = PBXGroup;
 			children = (
-				19FE0FFE19C8BDBE0043A920 /* ResultTableViewCell.swift */,
+				1971A2DC19CB386500E1395A /* controller */,
+				1971A2DB19CB386000E1395A /* view */,
+				1971A2DA19CB385600E1395A /* model */,
 				19FE0FDA19C8BD5B0043A920 /* AppDelegate.swift */,
-				19FE0FDC19C8BD5B0043A920 /* ViewController.swift */,
 				19FE0FDE19C8BD5B0043A920 /* Main.storyboard */,
 				19FE0FE119C8BD5B0043A920 /* Images.xcassets */,
 				19FE0FE319C8BD5B0043A920 /* LaunchScreen.xib */,
@@ -125,10 +205,12 @@
 				19FE0FD119C8BD5B0043A920 /* Sources */,
 				19FE0FD219C8BD5B0043A920 /* Frameworks */,
 				19FE0FD319C8BD5B0043A920 /* Resources */,
+				1977A50D19CB5F7E0010B019 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1977A50C19CB5F7E0010B019 /* PBXTargetDependency */,
 			);
 			name = NewHolland;
 			productName = NewHolland;
@@ -182,6 +264,12 @@
 			mainGroup = 19FE0FCC19C8BD5B0043A920;
 			productRefGroup = 19FE0FD619C8BD5B0043A920 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1977A50119CB5F6D0010B019 /* Products */;
+					ProjectRef = 1977A50019CB5F6D0010B019 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				19FE0FD419C8BD5B0043A920 /* NewHolland */,
@@ -189,6 +277,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1977A50619CB5F6D0010B019 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 1977A50519CB5F6D0010B019 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1977A50819CB5F6D0010B019 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = 1977A50719CB5F6D0010B019 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		19FE0FD319C8BD5B0043A920 /* Resources */ = {
@@ -217,7 +322,8 @@
 			files = (
 				19FE0FDD19C8BD5B0043A920 /* ViewController.swift in Sources */,
 				19FE0FDB19C8BD5B0043A920 /* AppDelegate.swift in Sources */,
-				19FE100219C8BDBE0043A920 /* ResultTableViewCell.swift in Sources */,
+				1971A2DE19CB388E00E1395A /* SearchResult.swift in Sources */,
+				1971A2D919CB237000E1395A /* ResultCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +338,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1977A50C19CB5F7E0010B019 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = 1977A50B19CB5F7E0010B019 /* PBXContainerItemProxy */;
+		};
 		19FE0FEC19C8BD5B0043A920 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 19FE0FD419C8BD5B0043A920 /* NewHolland */;
