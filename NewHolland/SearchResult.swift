@@ -16,7 +16,7 @@ class SearchResult {
     var milesFromCurrentLocation:Float = 0.0
     
     init() {
-        println("Initializing the SearchResult swift object")
+        
     }
     
     init(jsonResult:NSDictionary) {

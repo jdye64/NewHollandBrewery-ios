@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19163C4B19CC53210085C1D4 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19163C4A19CC53210085C1D4 /* ResultTableViewController.swift */; };
+		19163C7F19CC64B30085C1D4 /* ResultStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19163C7E19CC64B30085C1D4 /* ResultStore.swift */; };
+		19163C8119CC6D440085C1D4 /* RockSpringsApt.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 19163C8019CC6D440085C1D4 /* RockSpringsApt.gpx */; };
+		19163C8419CC78800085C1D4 /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19163C8319CC78800085C1D4 /* SearchManager.swift */; };
 		1971A2D919CB237000E1395A /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971A2D819CB237000E1395A /* ResultCell.swift */; };
 		1971A2DE19CB388E00E1395A /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971A2DD19CB388E00E1395A /* SearchResult.swift */; };
 		1977A4F219CB4DE50010B019 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1977A4F119CB4DE50010B019 /* CoreLocation.framework */; };
@@ -66,6 +70,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		19163C4A19CC53210085C1D4 /* ResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
+		19163C7E19CC64B30085C1D4 /* ResultStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultStore.swift; sourceTree = "<group>"; };
+		19163C8019CC6D440085C1D4 /* RockSpringsApt.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = RockSpringsApt.gpx; sourceTree = "<group>"; };
+		19163C8319CC78800085C1D4 /* SearchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
 		1971A2D819CB237000E1395A /* ResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
 		1971A2DD19CB388E00E1395A /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		1977A4F119CB4DE50010B019 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -102,9 +110,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19163C8219CC78700085C1D4 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				19163C8319CC78800085C1D4 /* SearchManager.swift */,
+			);
+			name = manager;
+			sourceTree = "<group>";
+		};
 		1971A2DA19CB385600E1395A /* model */ = {
 			isa = PBXGroup;
 			children = (
+				19163C7E19CC64B30085C1D4 /* ResultStore.swift */,
 				1971A2DD19CB388E00E1395A /* SearchResult.swift */,
 			);
 			name = model;
@@ -122,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				19FE0FDC19C8BD5B0043A920 /* ViewController.swift */,
+				19163C4A19CC53210085C1D4 /* ResultTableViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -138,6 +156,7 @@
 		19FE0FCC19C8BD5B0043A920 = {
 			isa = PBXGroup;
 			children = (
+				19163C8019CC6D440085C1D4 /* RockSpringsApt.gpx */,
 				1977A50019CB5F6D0010B019 /* Alamofire.xcodeproj */,
 				1977A4F119CB4DE50010B019 /* CoreLocation.framework */,
 				19FE0FD719C8BD5B0043A920 /* NewHolland */,
@@ -158,6 +177,7 @@
 		19FE0FD719C8BD5B0043A920 /* NewHolland */ = {
 			isa = PBXGroup;
 			children = (
+				19163C8219CC78700085C1D4 /* manager */,
 				1971A2DC19CB386500E1395A /* controller */,
 				1971A2DB19CB386000E1395A /* view */,
 				1971A2DA19CB385600E1395A /* model */,
@@ -301,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19FE0FE019C8BD5B0043A920 /* Main.storyboard in Resources */,
+				19163C8119CC6D440085C1D4 /* RockSpringsApt.gpx in Resources */,
 				19FE0FE519C8BD5B0043A920 /* LaunchScreen.xib in Resources */,
 				19FE0FE219C8BD5B0043A920 /* Images.xcassets in Resources */,
 			);
@@ -321,7 +342,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				19FE0FDD19C8BD5B0043A920 /* ViewController.swift in Sources */,
+				19163C8419CC78800085C1D4 /* SearchManager.swift in Sources */,
 				19FE0FDB19C8BD5B0043A920 /* AppDelegate.swift in Sources */,
+				19163C7F19CC64B30085C1D4 /* ResultStore.swift in Sources */,
+				19163C4B19CC53210085C1D4 /* ResultTableViewController.swift in Sources */,
 				1971A2DE19CB388E00E1395A /* SearchResult.swift in Sources */,
 				1971A2D919CB237000E1395A /* ResultCell.swift in Sources */,
 			);
