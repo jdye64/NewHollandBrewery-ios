@@ -13,6 +13,7 @@
 		19163C8419CC78800085C1D4 /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19163C8319CC78800085C1D4 /* SearchManager.swift */; };
 		19163C8619CC89960085C1D4 /* FilterCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19163C8519CC89960085C1D4 /* FilterCriteria.swift */; };
 		19163C8819CCB31C0085C1D4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19163C8719CCB31B0085C1D4 /* MapKit.framework */; };
+		1949D08D19CCBC4B0076E1DA /* BeersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1949D08C19CCBC4B0076E1DA /* BeersViewController.swift */; };
 		1971A2D919CB237000E1395A /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971A2D819CB237000E1395A /* ResultCell.swift */; };
 		1971A2DE19CB388E00E1395A /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971A2DD19CB388E00E1395A /* SearchResult.swift */; };
 		1977A4F219CB4DE50010B019 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1977A4F119CB4DE50010B019 /* CoreLocation.framework */; };
@@ -78,6 +79,7 @@
 		19163C8319CC78800085C1D4 /* SearchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
 		19163C8519CC89960085C1D4 /* FilterCriteria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCriteria.swift; sourceTree = "<group>"; };
 		19163C8719CCB31B0085C1D4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1949D08C19CCBC4B0076E1DA /* BeersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeersViewController.swift; sourceTree = "<group>"; };
 		1971A2D819CB237000E1395A /* ResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
 		1971A2DD19CB388E00E1395A /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		1977A4F119CB4DE50010B019 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -146,6 +148,7 @@
 			children = (
 				19FE0FDC19C8BD5B0043A920 /* ViewController.swift */,
 				19163C4A19CC53210085C1D4 /* ResultTableViewController.swift */,
+				1949D08C19CCBC4B0076E1DA /* BeersViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				19163C4B19CC53210085C1D4 /* ResultTableViewController.swift in Sources */,
 				1971A2DE19CB388E00E1395A /* SearchResult.swift in Sources */,
 				1971A2D919CB237000E1395A /* ResultCell.swift in Sources */,
+				1949D08D19CCBC4B0076E1DA /* BeersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
