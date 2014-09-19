@@ -26,22 +26,29 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ti3-OJ-NUb" userLabel="resultsMileDistanceSlider">
-                                        <rect key="frame" x="6" y="35" width="588" height="31"/>
+                                        <rect key="frame" x="6" y="35" width="588" height="330"/>
                                         <connections>
                                             <action selector="milesSliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="bgF-et-i92"/>
                                             <action selector="touchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kcr-SK-YUC"/>
                                         </connections>
                                     </slider>
+                                    <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3oc-mS-X29" userLabel="Beer Filter Picker">
+                                        <rect key="frame" x="-8" y="-62" width="600" height="162"/>
+                                    </pickerView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="Ti3-OJ-NUb" firstAttribute="bottom" secondItem="GI1-EO-UT9" secondAttribute="top" constant="10" id="J3p-8d-DR3"/>
+                                    <constraint firstItem="3oc-mS-X29" firstAttribute="leading" secondItem="IFi-tB-GaQ" secondAttribute="leading" constant="-8" id="9V1-N4-uR4"/>
+                                    <constraint firstItem="Ti3-OJ-NUb" firstAttribute="bottom" secondItem="GI1-EO-UT9" secondAttribute="top" id="J3p-8d-DR3"/>
                                     <constraint firstItem="Ti3-OJ-NUb" firstAttribute="leading" secondItem="IFi-tB-GaQ" secondAttribute="leading" constant="8" id="JTl-BV-cWz"/>
                                     <constraint firstAttribute="trailing" secondItem="Ti3-OJ-NUb" secondAttribute="trailing" constant="8" id="OV7-Z8-eBB"/>
                                     <constraint firstItem="GI1-EO-UT9" firstAttribute="leading" secondItem="IFi-tB-GaQ" secondAttribute="leading" constant="8" id="RMX-b4-dAg"/>
+                                    <constraint firstItem="Ti3-OJ-NUb" firstAttribute="top" secondItem="3oc-mS-X29" secondAttribute="bottom" constant="-65" id="ZAF-Xi-wSz"/>
+                                    <constraint firstAttribute="trailing" secondItem="3oc-mS-X29" secondAttribute="trailing" constant="8" id="jf1-Go-6Ub"/>
                                     <constraint firstAttribute="trailing" secondItem="GI1-EO-UT9" secondAttribute="trailing" constant="8" id="mOG-Hx-1o8"/>
                                     <constraint firstAttribute="height" constant="300" id="tnd-Kg-84X"/>
+                                    <constraint firstAttribute="bottom" secondItem="GI1-EO-UT9" secondAttribute="bottom" constant="5" id="w5L-zX-Pvi"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Pj7-EA-hdp" appends="YES" id="yIg-fs-alQ"/>
@@ -66,6 +73,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="beerFilterPicker" destination="3oc-mS-X29" id="Fu5-vR-SDV"/>
                         <outlet property="milesDistFilterLabel" destination="GI1-EO-UT9" id="63h-gP-Q85"/>
                         <outlet property="milesSlider" destination="Ti3-OJ-NUb" id="IH8-pL-uyy"/>
                         <outlet property="resultFilter" destination="IFi-tB-GaQ" id="bqJ-1I-k0C"/>
@@ -107,6 +115,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vG9-Rl-ne5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="862" y="-92"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fPW-iO-bNk">
+            <objects>
+                <viewController id="NLk-rE-HwL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tmI-fW-aZZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="zFc-Ax-JVq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uhz-eQ-3Cl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="d1E-6z-jQF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="d1E-6z-jQF" secondAttribute="trailing" id="4cO-Yj-2FF"/>
+                            <constraint firstItem="d1E-6z-jQF" firstAttribute="top" secondItem="uhz-eQ-3Cl" secondAttribute="top" id="Agq-bq-2Dp"/>
+                            <constraint firstItem="d1E-6z-jQF" firstAttribute="leading" secondItem="uhz-eQ-3Cl" secondAttribute="leading" id="bCx-7F-bOC"/>
+                            <constraint firstAttribute="bottom" secondItem="d1E-6z-jQF" secondAttribute="bottom" id="tBw-YH-U8Y"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jwa-he-oPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="862" y="661"/>
         </scene>
     </scenes>
 </document>

@@ -8,16 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var resultFilter: UIView!
     @IBOutlet weak var milesSlider: UISlider!
     @IBOutlet weak var milesDistFilterLabel: UILabel!
+    @IBOutlet weak var beerFilterPicker: UIPickerView!
     
     var _constraintsHiddenState:Array<AnyObject>!
     var _constraintsVisibleState:Array<AnyObject>!
     var headerHidden:Bool = true
     var searchManager:SearchManager = SearchManager.sharedInstance
+    
+    var currentSelectedBeerFromPicker:String? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +35,25 @@ class ViewController: UIViewController {
         //Initialize the view as hidden
         self.view.addConstraints(self._constraintsHiddenState)
         
+        self.beerFilterPicker.delegate = self
+        self.beerFilterPicker.dataSource = self
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "datasourceUpdated:", name: ResultStore.sharedInstance.NHBResultsUpdated, object: nil)
+        
         self.updateWithinMilesFilterLabel()
+    }
+    
+    //Notified by NSNotification event when the ResultStore datasource has been filtered or loaded
+    func datasourceUpdated(notification: NSNotification) {
+        self.beerFilterPicker.reloadAllComponents()
+    }
+    
+    //Exmines the current state of all of the filtering components and generates a filter criteria to feed to the ResultStore for filtering
+    func filterByCriteria() {
+        println("Filtering search results by criteria")
+        var fc = FilterCriteria()
+        fc.maxMiles = ResultStore.sharedInstance.currentMilesFilterUnder
+        fc.brand = self.currentSelectedBeerFromPicker
+        ResultStore.sharedInstance.filterResults(fc)
     }
 
     @IBAction func resultViewSwipedDown(sender: AnyObject) {
@@ -74,11 +95,31 @@ class ViewController: UIViewController {
     
     @IBAction func touchUpInside(sender: AnyObject) {
         println("Done changing the value of the miles slider")
-        ResultStore.sharedInstance.filterResults()
+        //ResultStore.sharedInstance.filterResults()
+        self.filterByCriteria()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //UIPICKER VIEW METHODS
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return ResultStore.sharedInstance.beerList.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return ResultStore.sharedInstance.beerList[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.currentSelectedBeerFromPicker = ResultStore.sharedInstance.beerList[row]
+        self.filterByCriteria()
+    }
+    
 }

@@ -14,6 +14,7 @@ class SearchResult {
     var address:String = ""
     var phone:String = ""
     var milesFromCurrentLocation:Float = 0.0
+    var brands:[String] = []
     
     init() {
         
@@ -24,6 +25,9 @@ class SearchResult {
         self.address = jsonResult["address"] as String
         self.phone = jsonResult["phone"] as String
         self.milesFromCurrentLocation = (jsonResult["miles"] as NSString).floatValue
+        
+        //Builds the array of brands that are available at this location
+        self.brands = jsonResult["brands"] as [String]
     }
     
 }

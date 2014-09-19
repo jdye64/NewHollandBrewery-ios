@@ -68,6 +68,7 @@ class ResultStore {
                     //Clear the past search results.
                     self.searchResults = []
                     self.filteredSearchResults = []
+                    self.resultsFiltered = false
                     
                     //Creates the SearchResult objects from the JSON Response
                     var searchResults:NSDictionary = jsonResult["results"] as NSDictionary!
@@ -101,7 +102,8 @@ class ResultStore {
     }
     
     
-    func filterResults() {
+    func filterResults(filterCriteria:FilterCriteria) {
+        
         if !self.currentlyLoadingResults {
             self.resultsFiltered = true
             
@@ -109,15 +111,16 @@ class ResultStore {
             self.filteredSearchResults = []
             
             //Right now only filtering by miles so narrow the results down to the locations that are within the miles range
-            println("Filtering to result under \(self.currentMilesFilterUnder) miles")
             for searchResult in self.searchResults {
-                if searchResult.milesFromCurrentLocation <= self.currentMilesFilterUnder {
+                if filterCriteria.passesCriteria(searchResult) {
                     self.filteredSearchResults.append(searchResult)
                 }
             }
             
             println("Original Search Results Size -> \(self.searchResults.count) Filtered Search Results Size -> \(self.filteredSearchResults.count)")
             self.notifyResultsUpdated()
+        } else {
+            println("Results are currently loading so filtering will not occur")
         }
     }
     
