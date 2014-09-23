@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		19163C4B19CC53210085C1D4 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19163C4A19CC53210085C1D4 /* ResultTableViewController.swift */; };
 		19163C7F19CC64B30085C1D4 /* ResultStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19163C7E19CC64B30085C1D4 /* ResultStore.swift */; };
-		19163C8119CC6D440085C1D4 /* RockSpringsApt.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 19163C8019CC6D440085C1D4 /* RockSpringsApt.gpx */; };
 		19163C8419CC78800085C1D4 /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19163C8319CC78800085C1D4 /* SearchManager.swift */; };
 		19163C8619CC89960085C1D4 /* FilterCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19163C8519CC89960085C1D4 /* FilterCriteria.swift */; };
 		19163C8819CCB31C0085C1D4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19163C8719CCB31B0085C1D4 /* MapKit.framework */; };
@@ -19,6 +18,8 @@
 		1977A4F219CB4DE50010B019 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1977A4F119CB4DE50010B019 /* CoreLocation.framework */; };
 		1977A50919CB5F7E0010B019 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1977A50619CB5F6D0010B019 /* Alamofire.framework */; };
 		1977A50A19CB5F7E0010B019 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1977A50619CB5F6D0010B019 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		198E8D8419CF33FD00F1CFE9 /* Beverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E8D8319CF33FD00F1CFE9 /* Beverage.swift */; };
+		198E8D8619CF342B00F1CFE9 /* BeverageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198E8D8519CF342B00F1CFE9 /* BeverageStore.swift */; };
 		19FE0FDB19C8BD5B0043A920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE0FDA19C8BD5B0043A920 /* AppDelegate.swift */; };
 		19FE0FDD19C8BD5B0043A920 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FE0FDC19C8BD5B0043A920 /* ViewController.swift */; };
 		19FE0FE019C8BD5B0043A920 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19FE0FDE19C8BD5B0043A920 /* Main.storyboard */; };
@@ -75,7 +76,6 @@
 /* Begin PBXFileReference section */
 		19163C4A19CC53210085C1D4 /* ResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
 		19163C7E19CC64B30085C1D4 /* ResultStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultStore.swift; sourceTree = "<group>"; };
-		19163C8019CC6D440085C1D4 /* RockSpringsApt.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = RockSpringsApt.gpx; sourceTree = "<group>"; };
 		19163C8319CC78800085C1D4 /* SearchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
 		19163C8519CC89960085C1D4 /* FilterCriteria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCriteria.swift; sourceTree = "<group>"; };
 		19163C8719CCB31B0085C1D4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -84,6 +84,8 @@
 		1971A2DD19CB388E00E1395A /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		1977A4F119CB4DE50010B019 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1977A50019CB5F6D0010B019 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		198E8D8319CF33FD00F1CFE9 /* Beverage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beverage.swift; sourceTree = "<group>"; };
+		198E8D8519CF342B00F1CFE9 /* BeverageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeverageStore.swift; sourceTree = "<group>"; };
 		19FE0FD519C8BD5B0043A920 /* NewHolland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewHolland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19FE0FD919C8BD5B0043A920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19FE0FDA19C8BD5B0043A920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,8 @@
 				19163C7E19CC64B30085C1D4 /* ResultStore.swift */,
 				1971A2DD19CB388E00E1395A /* SearchResult.swift */,
 				19163C8519CC89960085C1D4 /* FilterCriteria.swift */,
+				198E8D8319CF33FD00F1CFE9 /* Beverage.swift */,
+				198E8D8519CF342B00F1CFE9 /* BeverageStore.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -166,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				19163C8719CCB31B0085C1D4 /* MapKit.framework */,
-				19163C8019CC6D440085C1D4 /* RockSpringsApt.gpx */,
 				1977A50019CB5F6D0010B019 /* Alamofire.xcodeproj */,
 				1977A4F119CB4DE50010B019 /* CoreLocation.framework */,
 				19FE0FD719C8BD5B0043A920 /* NewHolland */,
@@ -331,7 +334,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				19FE0FE019C8BD5B0043A920 /* Main.storyboard in Resources */,
-				19163C8119CC6D440085C1D4 /* RockSpringsApt.gpx in Resources */,
 				19FE0FE519C8BD5B0043A920 /* LaunchScreen.xib in Resources */,
 				19FE0FE219C8BD5B0043A920 /* Images.xcassets in Resources */,
 			);
@@ -351,6 +353,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198E8D8619CF342B00F1CFE9 /* BeverageStore.swift in Sources */,
+				198E8D8419CF33FD00F1CFE9 /* Beverage.swift in Sources */,
 				19163C8619CC89960085C1D4 /* FilterCriteria.swift in Sources */,
 				19FE0FDD19C8BD5B0043A920 /* ViewController.swift in Sources */,
 				19163C8419CC78800085C1D4 /* SearchManager.swift in Sources */,
