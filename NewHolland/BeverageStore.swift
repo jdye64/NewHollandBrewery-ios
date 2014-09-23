@@ -19,15 +19,20 @@ class BeverageStore {
         return Static.instance
     }
     
+    //Defines notifications that the ResultStore may broadcast throughout the application.
+    let NHBBeginLoadingBeers: NSString = "NHBBeginLoadingBeers"
+    let NHBBeersLoaded: NSString = "NHBBeersLoaded"
+    
     let beersURL: String = "http://beerfinder.jeremydyer.me/beers"
     var beverages:[Beverage] = []
     
     private init() {
-        self.loadAllBeverages()
+        //self.loadAllBeverages()
     }
     
 
     func loadAllBeverages() {
+        self.notifyLoadBegin()
         
         Alamofire.request(.GET, self.beersURL)
             .responseJSON { (request, response, json, error) in
@@ -42,8 +47,19 @@ class BeverageStore {
                 }
                 
                 println("Loaded \(self.beverages.count) beers into the local beer store")
+                
+                //Let the application know that the data is loaded and ready to be used now
+                self.notifyLoadComplete()
         }
     
+    }
+    
+    func notifyLoadBegin() {
+        NSNotificationCenter.defaultCenter().postNotificationName(self.NHBBeginLoadingBeers, object: nil)
+    }
+    
+    func notifyLoadComplete() {
+        NSNotificationCenter.defaultCenter().postNotificationName(self.NHBBeersLoaded, object: nil)
     }
 
 }

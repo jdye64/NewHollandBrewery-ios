@@ -12,7 +12,6 @@ import UIKit
 class ResultTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var resultsTable: UITableView!
-    //@IBOutlet weak var searchActivityIndicator: UIActivityIndicatorView!
     let cellIdentifier = "cellIdentifier"
     
     required init(coder aDecoder: NSCoder) {
@@ -83,8 +82,6 @@ class ResultTableViewController: UITableViewController, UITableViewDataSource, U
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        var selectedSearchResult:SearchResult = self.searchResults[indexPath.row]
-//        println(selectedSearchResult)
         println("Selected a row in the table. This logic is not yet implemented. Hold tight")
     }
     

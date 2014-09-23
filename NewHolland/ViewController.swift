@@ -18,7 +18,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var _constraintsHiddenState:Array<AnyObject>!
     var _constraintsVisibleState:Array<AnyObject>!
     var headerHidden:Bool = true
-    //var searchManager:SearchManager = SearchManager.sharedInstance
+    var searchManager:SearchManager = SearchManager.sharedInstance
     
     var currentSelectedBeerFromPicker:String? = nil
     

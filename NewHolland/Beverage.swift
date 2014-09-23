@@ -32,10 +32,10 @@ class Beverage {
         self.description = jsonData["Description"] as? String
         self.grains = jsonData["Grains"] as? String
         self.yeast = jsonData["Yeast"] as? String
-        self.abv = jsonData["Alcohol by Volume"] as? Float
+        self.abv = (jsonData["Alcohol by Volume"] as NSString).floatValue
         self.beerName = jsonData["BeerName"] as? String
-        self.ibus = jsonData["IBUs"] as? Int
-        self.firstBrewed = jsonData["First Brewed"] as? Int
+        self.ibus = (jsonData["IBUs"] as NSString).integerValue
+        self.firstBrewed = (jsonData["First Brewed"] as NSString).integerValue
         self.hops = jsonData["Hops"] as? String
         self.pairings = jsonData["Pairings"] as? String
     }
