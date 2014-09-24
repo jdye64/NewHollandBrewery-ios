@@ -16,6 +16,7 @@ class BeerViewController: UIViewController {
     
     //Outlets for the Beer Description View
     @IBOutlet weak var beerBottleUIImage: UIImageView!
+    @IBOutlet weak var beerLogoUIImage: UIImageView!
     @IBOutlet weak var beerDescriptionView: UIView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var beerStyleView: UIView!
@@ -26,14 +27,6 @@ class BeerViewController: UIViewController {
     @IBOutlet weak var degreesPlatoLabel: UILabel!
     @IBOutlet weak var ibusView: UIView!
     @IBOutlet weak var ibusLabel: UILabel!
-    @IBOutlet weak var grainsView: UIView!
-    @IBOutlet weak var grainsLabel: UILabel!
-    @IBOutlet weak var hopsView: UIView!
-    @IBOutlet weak var hopsLabel: UILabel!
-    @IBOutlet weak var yeastView: UIView!
-    @IBOutlet weak var yeastLabel: UILabel!
-    
-    @IBOutlet weak var locateNearbyBeersButton: UIButton!
     
     let subviewAlpha:CGFloat = 0.6
     var currentIndex:Int = 0
@@ -57,9 +50,6 @@ class BeerViewController: UIViewController {
         self.abvView.backgroundColor = UIColor.darkGrayColor().colorWithAlphaComponent(subviewAlpha)
         self.degreesPlatoView.backgroundColor = UIColor.darkGrayColor().colorWithAlphaComponent(subviewAlpha)
         self.ibusView.backgroundColor = UIColor.darkGrayColor().colorWithAlphaComponent(subviewAlpha)
-        self.grainsView.backgroundColor = UIColor.darkGrayColor().colorWithAlphaComponent(subviewAlpha)
-        self.hopsView.backgroundColor = UIColor.darkGrayColor().colorWithAlphaComponent(subviewAlpha)
-        self.yeastView.backgroundColor = UIColor.darkGrayColor().colorWithAlphaComponent(subviewAlpha)
         
         //Loads all of the beers from the server
         self.beverageStore.loadAllBeverages()
@@ -94,12 +84,12 @@ class BeerViewController: UIViewController {
     
     func displayBeverage(beverage:Beverage) {
         
-//        //Loads the logo image
-//        Alamofire.request(.GET, beverage.beerLogoImageURL!)
-//            .response { (request, response, data, error) in
-//                var logoImage = UIImage(data: data as NSData)
-//                self.logoImageView.image = logoImage
-//        }
+        //Loads the logo image
+        Alamofire.request(.GET, beverage.beerLogoImageURL!)
+            .response { (request, response, data, error) in
+                var logoImage = UIImage(data: data as NSData)
+                self.beerLogoUIImage.image = logoImage
+        }
         
         //Loads the Beer bottle image
         Alamofire.request(.GET, beverage.beerBottleImageURL!)
@@ -112,15 +102,12 @@ class BeerViewController: UIViewController {
         
         //Set up the Beer Style View
         self.beerStyleLabel.text? = beverage.beerStyle!
-        self.abvLabel.text? = NSString(format: "%.2f", beverage.abv!) + " %"
+        self.abvLabel.text? = NSString(format: "%.2f", beverage.abv!) + "%"
         
         self.ibusLabel.text? = NSString(format: "%d", beverage.ibus!)
         self.degreesPlatoLabel.text? = NSString(format: "%.2f", beverage.degreesPlato!)
-        self.grainsLabel.text? = beverage.grains!
-        self.hopsLabel.text? = beverage.hops!
-        self.yeastLabel.text? = beverage.yeast!
         
-        self.locateNearbyBeersButton.titleLabel?.text? = "Locate nearby " + beverage.beerName!
+        //self.locateNearbyBeersButton.titleLabel?.text? = "Locate nearby " + beverage.beerName!
     }
     
     
